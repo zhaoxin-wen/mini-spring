@@ -1,6 +1,8 @@
 package com.minispring.context.support;
 
 import com.minispring.beans.BeansException;
+import com.minispring.core.io.ClassPathResource;
+import com.minispring.core.io.Resource;
 
 /**
  * 类路径XML应用上下文
@@ -53,5 +55,16 @@ public class ClassPathXmlApplicationContext extends AbstractXmlApplicationContex
     @Override
     public boolean containsBeanDefinition(String beanName) {
         return getBeanFactory().containsBeanDefinition(beanName);
+    }
+
+
+    /**
+     *
+     * @param location 资源位置
+     * @return
+     */
+    @Override
+    public Resource getResource(String location) {
+        return new ClassPathResource(location);
     }
 }
