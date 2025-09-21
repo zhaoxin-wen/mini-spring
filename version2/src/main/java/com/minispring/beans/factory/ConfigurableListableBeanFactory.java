@@ -34,11 +34,5 @@ public interface ConfigurableListableBeanFactory extends ListableBeanFactory, Au
      */
     @Override
     String[] getBeanDefinitionNames();
-    
-    /**
-     * 添加BeanPostProcessor
-     * 
-     * @param beanPostProcessor 要添加的处理器
-     */
-    void addBeanPostProcessor(BeanPostProcessor beanPostProcessor);
+
 } 
